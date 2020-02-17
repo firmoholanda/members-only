@@ -1,4 +1,4 @@
-# 📃 sample-app (ruby on rails tutorial sample application)
+# 📃 Authentification Project (ruby on rails members-only application)
 
 the Ruby on Rails Tutorial is designed to give you a thorough introduction to web application development, including a basic grounding in Ruby, Rails, HTML & CSS, databases, version control, testing, and deployment—sufficient to launch you on a career as a web developer or technology entrepreneur.
 
@@ -17,7 +17,7 @@ ruby, rest-client api, nokogiri for parsing and git was used on this project.
 
 ## 🚀 the project
 
-this project can be found in https://github.com/firmoholanda/sample-app
+this project can be found in https://github.com/firmoholanda/members-only
 
 
 
@@ -64,6 +64,7 @@ contributions, issues, and feature requests are welcome!<br/>feel free to check 
 ## 🤖 contributor
 
 firmo holanda - [GitHub](https://github.com/firmoholanda)
+roodz fernando fleurant - [GitHub](https://github.com/roodzfernando)
 
 
 
