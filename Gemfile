@@ -19,9 +19,12 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'jquery-rails'
 gem 'bootstrap-sass', '3.3.7'
-gem 'bcrypt', '~> 3.1.7'
-gem 'faker', '~> 2.10', '>= 2.10.1'
+gem 'bcrypt', '>= 3.1.13'
+gem 'faker', '1.7.3'
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate', '1.0.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

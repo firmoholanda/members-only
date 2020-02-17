@@ -962,3 +962,650 @@ Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms)
 BCrypt::Errors::InvalidHash (invalid hash):
   
 app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/users" for ::1 at 2020-02-17 18:37:36 -0300
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 768ms (Views: 748.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:43:11 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 135ms (Views: 128.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:43:14 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 87ms (Views: 84.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:44:58 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 858ms (Views: 836.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/singin" for ::1 at 2020-02-17 18:45:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/singin"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-02-17 18:45:09 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+Started GET "/login" for ::1 at 2020-02-17 18:45:14 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8431.4ms)
+Completed 200 OK in 8865ms (Views: 8860.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendered sessions/new.html.erb within layouts/application (7601.9ms)
+Completed 200 OK in 7773ms (Views: 7738.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-17 18:45:49 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"++Emr8WjVuSKK3lItvaZPJ3pt9ivu5gbLieajrY63bzX13J45emhisp7taTN+JHLwVgTnLjDDR4e5mWru8I95Q==", "session"=>{"email"=>"fernando@google.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fernando@google.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.0ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for ::1 at 2020-02-17 18:47:31 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"++Emr8WjVuSKK3lItvaZPJ3pt9ivu5gbLieajrY63bzX13J45emhisp7taTN+JHLwVgTnLjDDR4e5mWru8I95Q==", "session"=>{"email"=>"fernando@google.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fernando@google.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.9ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/users/new" for ::1 at 2020-02-17 18:48:01 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 93ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-02-17 18:48:21 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+Qw1h//URRDSy2IjCqFqTnAnYTZdrAqMOCvg15FfW2D0mQBP7WmegMb4WT3JI1eZXE5wM4OJS8AIVCmU72dNA==", "user"=>{"name"=>"user07", "email"=>"user07@google.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user07@google.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "user07"], ["email", "user07@google.com"], ["password_digest", "$2a$12$QITwbWez8P.OdsVdYvhQl.D4.niDsJfOjFwNU9hr.lnyKcJtQRUZq"], ["created_at", "2020-02-17 21:48:22.189348"], ["updated_at", "2020-02-17 21:48:22.189348"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 406ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/users/8" for ::1 at 2020-02-17 18:48:22 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 94ms (Views: 87.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:48:24 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 161ms (Views: 156.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for ::1 at 2020-02-17 18:48:26 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 99ms (Views: 96.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-17 18:48:29 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bd3OFONh5VU73bITzcoIRzS65wuBVWraRV4lwHM4uTop65rDwysSO3uNfv+2xACwaAtDT5Yt/991n9rlfsBZYw==", "session"=>{"email"=>"user07@google.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user07@google.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 420ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/8" for ::1 at 2020-02-17 18:48:30 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 175ms (Views: 170.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:48:45 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 81ms (Views: 76.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2020-02-17 18:48:51 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 161ms (Views: 157.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-17 18:48:58 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/z6MPR4eq1kKqg2b8l89LfPKLd74meU2jbzQmB/1b1rTCNjqPlRcN0r6wXeJUTXar3uJmu/hcDO9fS+9Eg2PAw==", "session"=>{"email"=>"user07@google.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user07@google.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 452ms (Views: 98.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2020-02-17 18:49:06 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1t3yoEBcWt5aRCE90ItI3k0J9Our8FpXYMZUKw6M4mD666Z3YBatsBoU7dGrhUApEbhQr7yIz1JQB6sOA3QCOQ==", "session"=>{"email"=>"user07@google.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user07@google.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 415ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for ::1 at 2020-02-17 18:49:07 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 116ms (Views: 110.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:50:24 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 108ms (Views: 104.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:51:07 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6979ms (Views: 6975.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2020-02-17 18:51:21 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 204ms (Views: 200.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-17 18:51:39 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 3818ms (Views: 3813.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:51:52 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 159ms (Views: 154.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:51:56 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 218ms (Views: 214.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:52:22 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 192ms (Views: 186.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:56:21 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 963ms (Views: 940.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/login" for ::1 at 2020-02-17 18:56:26 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+Started GET "/login" for ::1 at 2020-02-17 18:56:30 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7801.5ms)
+Completed 200 OK in 8672ms (Views: 8669.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered sessions/new.html.erb within layouts/application (7667.8ms)
+Completed 200 OK in 7904ms (Views: 7881.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-17 18:56:43 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MpOqUpiA6LfAFXbFleej0Qw//ZCdbuzkbWIndUj4rj4epf6FuMof2YBFuinu6asmUI5Z1IoWeeFdo9hQRQBOZw==", "session"=>{"email"=>"user07@google.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user07@google.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$Mb8TEKEw3uqyDbQ4Kw4dyuuj/pZUxzhPVHX1SPqpAAIOG1C2O6irG"], ["updated_at", "2020-02-17 21:56:43.886893"], ["id", 8]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 714ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/users/8" for ::1 at 2020-02-17 18:56:43 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 163ms (Views: 154.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-02-17 18:56:53 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/tools/ruby/lib/ruby/gems/2.6.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/tools/ruby/lib/ruby/gems/2.6.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:57:00 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 180ms (Views: 176.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 18:58:33 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 456ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x0000000010d48ce8>:0x0000000010c54648>):
+    14:         <div class="alert alert-<%= message_type %>"><%= message %></div>
+    15:       <% end %>
+    16:       <%= yield %>
+    17:       <%= user.logged_in? %>
+    18:       <%= debug(params) if Rails.env.development? %>
+    19:     </div>
+    20:   </body>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__214969983_141326640'
+Started GET "/users" for ::1 at 2020-02-17 18:58:41 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `logged_in?' for #<Class:0x0000000010cb4e30>):
+    14:         <div class="alert alert-<%= message_type %>"><%= message %></div>
+    15:       <% end %>
+    16:       <%= yield %>
+    17:       <%= User.logged_in? %>
+    18:       <%= debug(params) if Rails.env.development? %>
+    19:     </div>
+    20:   </body>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__214969983_110914660'
+Started GET "/users" for ::1 at 2020-02-17 18:59:47 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 409ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000010d48ce8>:0x000000000efe2460>):
+    14:         <nav>
+    15:           <ul class="nav navbar-nav navbar-right">
+    16:             <li><%= link_to "posts",   '/posts' %></li>
+    17:             <% if logged_in? %>
+    18:               <li><%= link_to "users",  '/users' %></li>
+    19:               <li><%= link_to "help",   '/static_pages/help' %></li>
+    20:               <li class="dropdown">
+  
+app/helpers/sessions_helper.rb:17:in `logged_in?'
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__214969983_125800680'
+Started GET "/users" for ::1 at 2020-02-17 19:00:37 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (47.1ms)
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 349ms (Views: 335.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 19:00:42 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 94.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 19:00:44 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 163ms (Views: 159.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 19:00:45 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (21.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 181ms (Views: 177.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/static_pages/help" for ::1 at 2020-02-17 19:00:47 -0300
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 172ms (Views: 167.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/static_pages/help" for ::1 at 2020-02-17 19:00:48 -0300
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 116.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2020-02-17 19:00:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/static_pages/help" for ::1 at 2020-02-17 19:00:51 -0300
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 176ms (Views: 171.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/static_pages/help" for ::1 at 2020-02-17 19:00:52 -0300
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 86.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/static_pages/help" for ::1 at 2020-02-17 19:00:54 -0300
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 164.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/static_pages/help" for ::1 at 2020-02-17 19:01:41 -0300
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/app/assets/config
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/app/assets/images
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/app/assets/javascripts
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/app/assets/stylesheets
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/actioncable-5.1.7/lib/assets/compiled
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/actionview-5.1.7/lib/assets/compiled
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/node_modules
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= stylesheet_link_tag    'application', media: 'all',
+     7:                                               'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10:   <body>
+    11:     <header class="navbar navbar-fixed-top navbar-inverse">
+  
+app/assets/javascripts/application.js:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__214969983_145094740'
+Started GET "/static_pages/help" for ::1 at 2020-02-17 19:02:22 -0300
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/app/assets/config
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/app/assets/images
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/app/assets/javascripts
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/app/assets/stylesheets
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/actioncable-5.1.7/lib/assets/compiled
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/actionview-5.1.7/lib/assets/compiled
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  C:/Users/holanda/OneDrive/coding/microverse/members-only/node_modules
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  C:/tools/ruby/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= stylesheet_link_tag    'application', media: 'all',
+     7:                                               'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10:   <body>
+    11:     <header class="navbar navbar-fixed-top navbar-inverse">
+  
+app/assets/javascripts/application.js:1
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__214969983_129134780'
+Started GET "/static_pages/help" for ::1 at 2020-02-17 19:03:28 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 5483ms (Views: 5464.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/8" for ::1 at 2020-02-17 19:04:55 -0300
+Started GET "/" for ::1 at 2020-02-17 19:04:55 -0300
+Started GET "/" for ::1 at 2020-02-17 19:04:55 -0300
+Started GET "/posts" for ::1 at 2020-02-17 19:04:55 -0300
+Started GET "/users/8" for ::1 at 2020-02-17 19:04:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-17 19:05:43 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/tools/ruby/lib/ruby/gems/2.6.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/tools/ruby/lib/ruby/gems/2.6.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (8.9ms)
+Completed 200 OK in 40ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 19:05:49 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (61.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 882ms (Views: 869.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 19:06:39 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 233ms (Views: 228.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 19:08:17 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 373ms (Views: 362.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 19:08:26 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 621ms (Views: 606.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2020-02-17 19:08:34 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 250ms (Views: 247.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2020-02-17 19:08:41 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4112.2ms)
+Completed 200 OK in 4307ms (Views: 4298.7ms | ActiveRecord: 0.0ms)
+
+
