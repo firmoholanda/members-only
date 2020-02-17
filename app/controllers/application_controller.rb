@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+
   protect_from_forgery with: :exception
   include SessionsHelper
 
@@ -11,5 +12,5 @@ class ApplicationController < ActionController::Base
       #store_location
       redirect_to :login
     end
-    
+
 end
