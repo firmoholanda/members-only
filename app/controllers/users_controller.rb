@@ -31,7 +31,6 @@ class UsersController < ApplicationController
     else
       render :new
     end
-
   end
 
   # PATCH/PUT /users/1
