@@ -2,14 +2,12 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
   before_action :user_logged_in?, except: %i[new create]
 
-  # GET /users
-  # GET /users.json
+  # GET /users 
   def index
     @users = User.paginate(page: params[:page])
   end
 
   # GET /users/1
-  # GET /users/1.json
   def show; end
 
   # GET /users/new
