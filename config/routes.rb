@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # users
   resources :users
 
+  get '/sign_up', to: 'users#new'
+
   # static_pages
   get 'static_pages/home'
   get 'static_pages/help'
