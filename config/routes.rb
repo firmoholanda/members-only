@@ -1,18 +1,27 @@
 Rails.application.routes.draw do
-  resources :posts
+  
   root 'static_pages#home'
-  # sessions
-  get     '/login',   to: 'sessions#new'
-  post    '/login',   to: 'sessions#create'
-  delete  '/logout',  to: 'sessions#destroy'
-
-  # users
-  resources :users
 
   # static_pages
   get 'static_pages/home'
   get 'static_pages/help'
 
+  # user routes
+  resources :users
 
+  get '/users', to: 'users#index'
+  get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+  get '/account', to: 'users#edit'
+  patch '/account', to: 'users#update'
+  delete 'account', to: 'users#destroy'
+
+  # session routes
+  get     '/login',   to: 'sessions#new'
+  post    '/login',   to: 'sessions#create'
+  delete  '/logout',  to: 'sessions#destroy'
+
+  # post routes
+  resources :posts
 
 end
