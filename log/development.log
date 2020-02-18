@@ -8383,3 +8383,578 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 169ms (Views: 166.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-02-18 17:14:57 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4.6ms)
+Started GET "/sign_up" for ::1 at 2020-02-18 17:14:58 -0300
+Completed 200 OK in 909ms (Views: 902.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+Started GET "/sign_up" for ::1 at 2020-02-18 17:15:00 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4681.5ms)
+  Rendered users/new.html.erb within layouts/application (4098.7ms)
+Completed 200 OK in 6164ms (Views: 6063.5ms | ActiveRecord: 7.9ms)
+
+
+Completed 200 OK in 4456ms (Views: 4451.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-02-18 17:15:16 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JH4rtTxLmiYCC9Dd9M/19B/r7CHqCyLsWklgURkCxBKq7SbN+KxRNswGjdyCWx7Y5yWfm3WjRsJW0cw0VocGog==", "user"=>{"name"=>"helga medeiros", "email"=>"helgapmedeiros@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "helgapmedeiros@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "helga medeiros"], ["email", "helgapmedeiros@gmail.com"], ["password_digest", "$2a$12$4t7OBjTe3fbgrIi8UN6hDeO1y5lW.6xVU80/W/ZqMOJZ.7ffRPuK2"], ["created_at", "2020-02-18 20:15:16.540386"], ["updated_at", "2020-02-18 20:15:16.540386"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/120
+Completed 302 Found in 388ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/users/120" for ::1 at 2020-02-18 17:15:16 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :user_logged_in? rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 17:15:16 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 177ms (Views: 161.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 17:15:20 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qn/04IQSP5OEa1DVoQoNEhLPyDji/MX3UBdhrXd/g+32+Jv1TZgGMJs5sX7fB5u7PYIBpRIlO0xXcXXBDnrcqw==", "session"=>{"email"=>"helgapmedeiros@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "helgapmedeiros@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$1FNyZGILnSzmBGB5/.Yqx.Xbm3SHmfy/gfXeaI83HcoQj.9Qldu0q"], ["updated_at", "2020-02-18 20:15:21.606570"], ["id", 120]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/120
+Completed 302 Found in 747ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/users/120" for ::1 at 2020-02-18 17:15:21 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 211ms (Views: 189.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:15:24 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Completed 200 OK in 161ms (Views: 157.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:20:01 -0300
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:20:01 -0300
+Processing by StaticPagesController#home as HTML
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Completed 200 OK in 303ms (Views: 290.3ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Completed 200 OK in 312ms (Views: 304.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:20:15 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Completed 200 OK in 1553ms (Views: 1524.2ms | ActiveRecord: 17.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 17:20:19 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZVDnt96bz8ioY/9OsC6cE7iwHbqIRngAMZ3KBIAUNAvR14iiFxH2a7cxHuXOIwq6l/3UJ3ifhrs2+95o+RFrTQ=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 17:20:20 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 163ms (Views: 157.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 17:20:22 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3201.1ms)
+Completed 200 OK in 3395ms (Views: 3386.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for ::1 at 2020-02-18 17:20:34 -0300
+  
+SyntaxError (C:/Users/holanda/OneDrive/coding/microverse/members-only/app/controllers/users_controller.rb:66: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:66: syntax error, unexpected end, expecting end-of-input
+Started GET "/sign_up" for ::1 at 2020-02-18 17:21:03 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 237ms (Views: 209.5ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/users" for ::1 at 2020-02-18 17:21:33 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xWHS3eIckGfQj11A2M3tGTnq2qhNUN+97fp2PrVrkU9x5r3IK5apxM/dvOumwHuwFqcTNb2JIQbqnGJSzG7OCQ==", "user"=>{"name"=>"user10", "email"=>"user10@user.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user10@user.org"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "user10"], ["email", "user10@user.org"], ["password_digest", "$2a$12$aduSHFhTIXKuqe8H/JyZvOyRjZto52LfDWL0yK/bZ0X1hzJL5lEH2"], ["created_at", "2020-02-18 20:21:34.440890"], ["updated_at", "2020-02-18 20:21:34.440890"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/121
+Completed 302 Found in 413ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/users/121" for ::1 at 2020-02-18 17:21:34 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"121"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 121], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 121], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 201ms (Views: 194.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:21:44 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 121], ["LIMIT", 1]]
+Completed 200 OK in 193ms (Views: 189.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 17:21:46 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lyUaUqHV1XQwA/V6NABSGl4ZK9ZMr16sxYrhCFpduNsjonVHaF/s1y9RFNFKDcSzcVTiS7x2oBfC7PVkI1jnnQ=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 121], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 17:21:47 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 211ms (Views: 208.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:21:49 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 200ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 17:21:51 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 203ms (Views: 197.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 17:22:04 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h2mW3/2UjBKrUH/ufp1igq6E4+jUxfFgEurlLJOHdrClqYWw7e3VhdrZnaxhgOKrLu8Hs7fQuSOCKQQkyNFfvQ==", "session"=>{"email"=>"helgapmedeiros@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "helgapmedeiros@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$T8QcVMKHW1ojkjAD.p2qU.wlGAaJ24AHrMcwApc39rLYlQrckIM66"], ["updated_at", "2020-02-18 20:22:05.135561"], ["id", 120]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/120
+Completed 302 Found in 761ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/users/120" for ::1 at 2020-02-18 17:22:05 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 198ms (Views: 191.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 17:22:07 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cWIARPjJZiUA2/jFv2rIGE1L3DWLgu72HcSTw/2tzuvF5W9RMUNfhh+JGW7BZ16xYgYVqHtbEE0aooevhKiRrQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 17:22:07 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 210ms (Views: 207.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:22:20 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 240ms (Views: 236.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 17:23:26 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 146ms (Views: 143.5ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 17:23:28 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n2wltPBGRwzgezrsV02Y/L+lFnfuqPVa0+Mam7eyz869rDbb4D8em5Hy2K5IUBjVP87yLI29vRlDIPuT7OTmww==", "session"=>{"email"=>"helgapmedeiros@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "helgapmedeiros@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$x533T8/qKahi3jTxXeODzekCx3Fh0MM69yNLAwfKGiyU.d1bWnk4G"], ["updated_at", "2020-02-18 20:23:29.065434"], ["id", 120]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/120
+Completed 302 Found in 869ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/users/120" for ::1 at 2020-02-18 17:23:29 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 232ms (Views: 215.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:23:33 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 131.0ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 17:23:35 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8bm/Lu1eINiY/ZKluD+SvRDbIfOq4usg7+keg18d8n5FPtA7JNQZe4evcw7GMgQUP5boblo7FZvojwrvJhitOA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 17:23:35 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 179ms (Views: 175.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:23:41 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 166ms (Views: 164.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 17:23:43 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 216ms (Views: 213.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 17:23:45 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kEOHGxr2rq0zENQDcgiNwCPHYe5X+0aAou9wCgzvMqSyg5R0Co/3OkKZNkFtFQ3po6yFtTTuDsMyLJECV7kbqQ==", "session"=>{"email"=>"helgapmedeiros@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "helgapmedeiros@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$kuSsyN8akp0rVqGQExNHveOgNLNai2H5TSt6PB9bXCu1kzCG2.Wpe"], ["updated_at", "2020-02-18 20:23:46.077689"], ["id", 120]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/120
+Completed 302 Found in 833ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/users/120" for ::1 at 2020-02-18 17:23:46 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 203ms (Views: 198.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:23:49 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Completed 200 OK in 192ms (Views: 189.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 17:23:51 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OHjt1KYdtBMQv54PwHQmnIuMzJB7OB7aIl8wVKtMzBmM/4LBb5eNsA/tf6S+ebA1pMEFDYvh4GElOSQ40kmTXw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 17:23:51 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 183ms (Views: 177.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 17:23:53 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 197ms (Views: 193.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 17:23:54 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eLVWodcTNCf4ZMZz0a5pgccpnPTAzLudwsbLf8N8crdadUXOx2ptsIntJDHOs+moR0J4r6PZ895SBSp3mCpbug==", "session"=>{"email"=>"helgapmedeiros@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "helgapmedeiros@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$9jRYeYa4NZBrbm5Kz.BLC.j/N3Pol3gNWAEG6ZJAd8jLDoYt0U/f2"], ["updated_at", "2020-02-18 20:23:55.648611"], ["id", 120]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/120
+Completed 302 Found in 819ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/users/120" for ::1 at 2020-02-18 17:23:55 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 211ms (Views: 206.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 17:23:58 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VIug+rBFimoxagFaHd9QPG83IFR/F7qmswgd+pqfHG7gDM/vec+zyS444PFj0saVQHrpyY/ORB20bgmW45pDKA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 17:23:58 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 187ms (Views: 184.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 17:24:22 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 268ms (Views: 265.9ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 17:24:24 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M/cUjGGj09Sp1k7r53HFW+AaMeQW7LTAjY0hJmDRCdIRNwfjcdqKQ9hfrKn4bEVyYHHVv3X5/IMdTsAuO4cg3w==", "session"=>{"email"=>"helgapmedeiros@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "helgapmedeiros@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$v0ox13KmunaUTSGcbSUIdOiP5xR7WKFD0IwujNHQNT9pkFPGB2LOC"], ["updated_at", "2020-02-18 20:24:25.291200"], ["id", 120]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/120
+Completed 302 Found in 829ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/users/120" for ::1 at 2020-02-18 17:24:25 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 210ms (Views: 201.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 17:24:27 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"760uX49IepNBFoPoQ7u2UG/pj6G+twG4ub34SOufQapbKkFKRsJDMF5EYkM9tiD5QKRGPE5u/wO+2+wkkpoe7A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 17:24:27 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 189ms (Views: 183.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:24:33 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 156ms (Views: 148.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-02-18 17:24:36 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (44.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (7.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.9ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (7.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (3.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (2.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (4.9ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (6.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  Rendered posts/_post.html.erb (1.9ms)
+  Rendered posts/index.html.erb within layouts/application (256.3ms)
+Completed 200 OK in 410ms (Views: 364.2ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 17:24:37 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 124ms (Views: 121.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 17:24:38 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"flPaBpoOUpfdgCEDVxOGUUgNi+IgMMaL0+dWaqEeZC1ck8lpincLAKwJw0FIDgZ4yGZvuUMljshDJLdi+khNIA==", "session"=>{"email"=>"helgapmedeiros@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "helgapmedeiros@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$PmnpRluTN7kL.8yV9oA6xOVgTiBZqAxxlUiNQ0mqgvYVSDSeiDENS"], ["updated_at", "2020-02-18 20:24:39.469003"], ["id", 120]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/120
+Completed 302 Found in 798ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/users/120" for ::1 at 2020-02-18 17:24:39 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 204ms (Views: 190.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:24:44 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Completed 200 OK in 211ms (Views: 201.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 17:24:45 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0ZNGJLswpJnoxG3ZtF/nWhWd2dvs3tezG0l5jGhutTNlFCkxcrqdOveWjHLKUnHzOtAQRhwHKQgcL23gEWvqdQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 120], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 17:24:46 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 226ms (Views: 223.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:24:47 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 130ms (Views: 126.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2020-02-18 17:24:48 -0300
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 248ms (Views: 245.1ms | ActiveRecord: 0.0ms)
+
+
