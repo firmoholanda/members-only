@@ -68,6 +68,7 @@ contributions, issues, and feature requests are welcome!<br/>feel free to check 
 ## 🤖 contributor
 
 firmo holanda - [GitHub](https://github.com/firmoholanda)
+roodz fernando fleurant - [GitHub](https://github.com/roodzfernando)
 
 roodz fernando fleurant - [GitHub](https://github.com/roodzfernando)
 

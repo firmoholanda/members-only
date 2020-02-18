@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
+  
   private
 
     def user_logged_in?
@@ -12,5 +13,5 @@ class ApplicationController < ActionController::Base
       #store_location
       redirect_to :login
     end
-
+  
 end
