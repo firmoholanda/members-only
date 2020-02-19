@@ -27,7 +27,7 @@ this project can be found in https://github.com/firmoholanda/members-only
 ### ✨ [live version](https://members-only-firmoholanda.herokuapp.com/)
 
 <a href="https://members-only-firmoholanda.herokuapp.com/" target="_blank">
-    <img alt="page animation" src="https://github.com/firmoholanda/newsweek.com-clone/blob/development/img/animation.gif"/>
+    <img alt="page animation" src="https://github.com/firmoholanda/members-only/blob/feature-06-refactoring/app/assets/images/screenshot.png"/>
 </a>
 
 
