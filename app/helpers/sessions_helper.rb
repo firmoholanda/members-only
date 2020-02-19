@@ -13,7 +13,6 @@ module SessionsHelper
       if user&.authenticated?(cookies[:remember_token])
         log_in user
         @current_user = user
-        debugger
       end
     end
   end
