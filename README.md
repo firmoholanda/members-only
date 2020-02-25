@@ -1,4 +1,4 @@
-# 📃 members-only (ruby on rails members-only application)
+# 📃 members-only
 
 in this project, we build an exclusive clubhouse where your members can write embarrassing posts about non-members. inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
@@ -75,7 +75,6 @@ contributions, issues, and feature requests are welcome!<br/>feel free to check 
 ## 🤖 contributor
 
 firmo holanda - [GitHub](https://github.com/firmoholanda)
-roodz fernando fleurant - [GitHub](https://github.com/roodzfernando)
 
 roodz fernando fleurant - [GitHub](https://github.com/roodzfernando)
 
