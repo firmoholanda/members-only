@@ -21,7 +21,7 @@ gem "bootstrap-sass", ">= 3.4.1"
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'faker', '1.7.3'
 gem 'jquery-rails'
-gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate', '~> 3.3.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
