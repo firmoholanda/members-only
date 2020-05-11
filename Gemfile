@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bcrypt', '>= 3.1.13'
 gem "bootstrap-sass", ">= 3.4.1"
 gem 'bootstrap-will_paginate', '1.0.0'
-gem 'faker', '2.10.2'
+gem 'faker', '2.11.0'
 gem 'jquery-rails'
 gem 'will_paginate', '~> 3.3.0'
 
