@@ -76,7 +76,7 @@ GEM
     crass (1.0.6)
     erubi (1.9.0)
     execjs (2.7.0)
-    faker (2.10.2)
+    faker (2.11.0)
       i18n (>= 1.6, < 2)
     ffi (1.12.2)
     ffi (1.12.2-x64-mingw32)
@@ -199,7 +199,7 @@ DEPENDENCIES
   byebug
   capybara (~> 3.31)
   coffee-rails (~> 5.0)
-  faker (= 2.10.2)
+  faker (= 2.11.0)
   jbuilder (~> 2.5)
   jquery-rails
   pg (= 1.2.3)
